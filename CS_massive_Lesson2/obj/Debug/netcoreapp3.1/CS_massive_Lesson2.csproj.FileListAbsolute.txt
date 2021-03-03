@@ -1,0 +1,13 @@
+C:\Users\dev\source\repos\CS_massive_Lesson2\CS_massive_Lesson2\bin\Debug\netcoreapp3.1\CS_massive_Lesson2.exe
+C:\Users\dev\source\repos\CS_massive_Lesson2\CS_massive_Lesson2\bin\Debug\netcoreapp3.1\CS_massive_Lesson2.deps.json
+C:\Users\dev\source\repos\CS_massive_Lesson2\CS_massive_Lesson2\bin\Debug\netcoreapp3.1\CS_massive_Lesson2.runtimeconfig.json
+C:\Users\dev\source\repos\CS_massive_Lesson2\CS_massive_Lesson2\bin\Debug\netcoreapp3.1\CS_massive_Lesson2.runtimeconfig.dev.json
+C:\Users\dev\source\repos\CS_massive_Lesson2\CS_massive_Lesson2\bin\Debug\netcoreapp3.1\CS_massive_Lesson2.dll
+C:\Users\dev\source\repos\CS_massive_Lesson2\CS_massive_Lesson2\bin\Debug\netcoreapp3.1\CS_massive_Lesson2.pdb
+C:\Users\dev\source\repos\CS_massive_Lesson2\CS_massive_Lesson2\obj\Debug\netcoreapp3.1\CS_massive_Lesson2.csprojAssemblyReference.cache
+C:\Users\dev\source\repos\CS_massive_Lesson2\CS_massive_Lesson2\obj\Debug\netcoreapp3.1\CS_massive_Lesson2.AssemblyInfoInputs.cache
+C:\Users\dev\source\repos\CS_massive_Lesson2\CS_massive_Lesson2\obj\Debug\netcoreapp3.1\CS_massive_Lesson2.AssemblyInfo.cs
+C:\Users\dev\source\repos\CS_massive_Lesson2\CS_massive_Lesson2\obj\Debug\netcoreapp3.1\CS_massive_Lesson2.csproj.CoreCompileInputs.cache
+C:\Users\dev\source\repos\CS_massive_Lesson2\CS_massive_Lesson2\obj\Debug\netcoreapp3.1\CS_massive_Lesson2.dll
+C:\Users\dev\source\repos\CS_massive_Lesson2\CS_massive_Lesson2\obj\Debug\netcoreapp3.1\CS_massive_Lesson2.pdb
+C:\Users\dev\source\repos\CS_massive_Lesson2\CS_massive_Lesson2\obj\Debug\netcoreapp3.1\CS_massive_Lesson2.genruntimeconfig.cache
