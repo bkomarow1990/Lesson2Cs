@@ -1,0 +1,13 @@
+C:\Users\Igor\source\repos\Lesson2Cs\Libary\obj\Debug\netcoreapp3.1\Libary.csprojAssemblyReference.cache
+C:\Users\Igor\source\repos\Lesson2Cs\Libary\obj\Debug\netcoreapp3.1\Libary.AssemblyInfoInputs.cache
+C:\Users\Igor\source\repos\Lesson2Cs\Libary\obj\Debug\netcoreapp3.1\Libary.AssemblyInfo.cs
+C:\Users\Igor\source\repos\Lesson2Cs\Libary\obj\Debug\netcoreapp3.1\Libary.csproj.CoreCompileInputs.cache
+C:\Users\Igor\source\repos\Lesson2Cs\Libary\bin\Debug\netcoreapp3.1\Libary.exe
+C:\Users\Igor\source\repos\Lesson2Cs\Libary\bin\Debug\netcoreapp3.1\Libary.deps.json
+C:\Users\Igor\source\repos\Lesson2Cs\Libary\bin\Debug\netcoreapp3.1\Libary.runtimeconfig.json
+C:\Users\Igor\source\repos\Lesson2Cs\Libary\bin\Debug\netcoreapp3.1\Libary.runtimeconfig.dev.json
+C:\Users\Igor\source\repos\Lesson2Cs\Libary\bin\Debug\netcoreapp3.1\Libary.dll
+C:\Users\Igor\source\repos\Lesson2Cs\Libary\bin\Debug\netcoreapp3.1\Libary.pdb
+C:\Users\Igor\source\repos\Lesson2Cs\Libary\obj\Debug\netcoreapp3.1\Libary.dll
+C:\Users\Igor\source\repos\Lesson2Cs\Libary\obj\Debug\netcoreapp3.1\Libary.pdb
+C:\Users\Igor\source\repos\Lesson2Cs\Libary\obj\Debug\netcoreapp3.1\Libary.genruntimeconfig.cache
