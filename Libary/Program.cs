@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Libary
 {
@@ -70,8 +71,118 @@ namespace Libary
                 Name = name;
                 Year = year;
             }
+            public static implicit operator CoverBook(Book book) {
+                return new CoverBook(book.name, book.author, book.year);
+            }
             public void Print() {
                 Console.WriteLine($"Author: {author}, Cipher: {cipher}, Name: {name}, Year: {year}");
+            }
+            public string this[string index]
+            {
+                get
+                {
+                    if (index == "year" || index=="Year" || index == "YEAR")
+                    {
+                        return year.ToString();
+                    }
+                    if (index == "author")
+                    {
+                        return author;
+                    }
+                    if (index == "name")
+                    {
+                        return name;
+                    }
+                    if (index == "cipher")
+                    {
+                        return cipher;
+                    }
+                    else
+                    {
+                        throw new Exception("Incorrect index");
+                    }
+                }
+                set
+                {
+                    if (index == "year" || index == "Year" || index == "YEAR")
+                    {
+                        this.year = Int32.Parse(value);
+                        return;
+                    }
+                    if (index == "name")
+                    {
+                        this.Name = value;
+                        return;
+                    }
+                    if (index == "cipher")
+                    {
+                        this.Cipher = value;
+                        return;
+                    }
+                    if (index == "author")
+                    {
+                        this.Author = value;
+                        return;
+                    }
+                    throw new Exception("Incorrect index");
+                }
+            }
+        }
+        // NEW CLASS CoverBook in 2nd HW
+        class CoverBook
+        {
+            private String name;
+            private String author;
+            private int year;
+            public String Name
+            {
+                get
+                {
+                    return name;
+                }
+                set
+                {
+                    if (!String.IsNullOrEmpty(value))
+                    {
+                        name = value;
+                    }
+                }
+            }
+            public String Author
+            {
+                get
+                {
+                    return author;
+                }
+                set
+                {
+                    if (!String.IsNullOrEmpty(value))
+                    {
+                        author = value;
+                    }
+                }
+            }
+            public int Year
+            {
+                get => year;
+                set
+                {
+                    year = value;
+                }
+            }
+            public CoverBook(string name, string author, int year)
+            {
+                this.Name = name;
+                this.Author = author;
+                this.Year = year;
+            }
+            public static implicit operator Book(CoverBook cbook)
+            {
+                return new Book(cbook.author, "NoCipher", cbook.name, cbook.year);
+            }
+            public void Print()
+            {
+                Console.WriteLine($"CoverBook:\nName: {name}, Author: {author}, Year: {year}");
             }
         }
         class Library
@@ -133,6 +244,58 @@ namespace Libary
                     --j;
                 }
             }
+            public Book this[int index]
+            {
+                get
+                {
+                    if (index < 0 || index >= books.Length)
+                    {
+                        throw new Exception("Incorrect index of book");
+                    }
+                    return books[index];
+                }
+                set
+                {
+                    if (index < 0 || index >= books.Length)
+                    {
+                        throw new Exception("Incorrect index of book");
+                    }
+                    if (value == null)
+                    {
+                        throw new Exception("Your book is null");
+                    }
+                    this.books[index] = value;
+                }
+            }
+            public Book this[string cipher]
+            {
+                get
+                {
+                    var a=Array.Find(books,e => e.Cipher==cipher);
+                    if (a == null)
+                    {
+                        Console.WriteLine("Haven`t book with same cipher");
+                        return null;
+                    }
+                    return a;
+                    
+                }
+                set
+                {
+                    var a = Array.FindIndex(books, e => e.Cipher == cipher);
+                    if (a == -1)
+                    {
+                        Console.WriteLine("Haven`t book with same cipher");
+                        if (value == null)
+                        {
+                            throw new Exception("Book is null");
+                        }
+                        return;
+                    }
+                    Console.WriteLine("Book finded, replaced ");
+                    books[a]=value;
+                }
+            }
             public void sortByAuthor() {
                 Array.Sort(books, (e, e2) => { return e.Author.CompareTo(e2.Author); });
             }
@@ -157,6 +320,19 @@ namespace Libary
             library.deleteBook("Kaban3");
             library.searchBookByName("Zoopark2");
             library.Print();
+            // HW part 2
+            Console.WriteLine("------------------New HW------------------");
+            Console.WriteLine("before (int library index):");
+            library.Print();
+            Console.WriteLine("after (int library index):");
+            library[0] = new Book("New Book", "NB", "What`s new", 2021);
+            library.Print();
+            Console.WriteLine("after 2 (string library index):");
+            library["NB"] = new Book("New Book2", "NB2", "What`s new 2", 2021);
+            library.Print();
+            Book newbook = new Book("Cast Test", "Test cast", "I", 2021);
+            CoverBook cb = (CoverBook)newbook;
+            cb.Print();
         }
     }
 }
