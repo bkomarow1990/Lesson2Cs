@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Libary
@@ -185,7 +187,7 @@ namespace Libary
                 Console.WriteLine($"CoverBook:\nName: {name}, Author: {author}, Year: {year}");
             }
         }
-        class Library
+        class Library : IEnumerable
         {
             private Book[] books;
             public Library(Book book)
@@ -296,6 +298,7 @@ namespace Libary
                     books[a]=value;
                 }
             }
+            public int GetCount() { return books.Length; }
             public void sortByAuthor() {
                 Array.Sort(books, (e, e2) => { return e.Author.CompareTo(e2.Author); });
             }
@@ -308,7 +311,33 @@ namespace Libary
                 Console.WriteLine($" Book with same name : ");
                 books[index].Print();
             }
+
+            public IEnumerator GetEnumerator()
+            {
+                foreach (Book item in books)
+                {
+                    yield return item;
+                }
+            }
+            public IEnumerator<Book> ReverseIterator()
+            {
+                for (int i = books.Length; 0 <= i; i--)
+                {
+                    yield return books[i];
+                }
+            }
+            public IEnumerator<Book> BookWithAuthorIterator(string author)
+            {
+                foreach (Book item in books)
+                {
+                    if (item.Author == author)
+                    {
+                        yield return item;
+                    }
+                }
+            }
         }
+        
         static void Main(string[] args)
         {
             Book book1 = new Book("Oleg Winnik", "chiper", "Sho - nebud", 2020);
